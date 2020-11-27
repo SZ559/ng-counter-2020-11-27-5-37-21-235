@@ -1,1 +1,1 @@
-<button (click) = "increaseCount()">+</button> <label> number: {{count}}</label> <button (click) = "decreaseCount()">-</button>
+<button (click) = "increaseCount()">+</button> <label> number: {{count}}</label> <button *ngIf="this.isMinusButtonVisible()" (click) = "decreaseCount()">-</button>

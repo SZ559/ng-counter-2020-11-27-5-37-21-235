@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CounterComponent implements OnInit {
 
-  count = 10;
+  count: number = 10;
   constructor() { }
 
   ngOnInit(): void {
@@ -19,4 +19,8 @@ export class CounterComponent implements OnInit {
   decreaseCount(): void {
     this.count--;
   }
+  isMinusButtonVisible(): boolean {
+    return this.count >= 0;
+  }
+
 }

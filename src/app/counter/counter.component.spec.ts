@@ -45,13 +45,23 @@ describe('CounterComponent', () => {
     expect(component.count).toBe(-1);
   });
 
-  // it('should increase count when click plus button', () => {
-  //   // given
-  //   component.count = -1;
+  it('should return false when count < 0', () => {
+    // given
+    component.count = -1;
 
-  //   // when
+    // when
 
-  //   // then
-  //   expect(component.count).toBe(-1);
-  // });
+    // then
+    expect(component.isMinusButtonVisible()).toBe(false);
+  });
+
+  it('should return true when count >= 0', () => {
+    // given
+    component.count = 0;
+
+    // when
+
+    // then
+    expect(component.isMinusButtonVisible()).toBe(true);
+  });
 });
